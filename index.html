@@ -1,102 +1,134 @@
 <!DOCTYPE html>
 <html lang=en>
 <head>
-<title>JSD Landing Page</title>
-<meta charset=utf-8 />
-<meta name=viewport content='width=device-width' />
-<meta name=author content='Jonas Spence Dobias' />
-
-
-<!-- Include Stylesheet -->
-<link rel='stylesheet' type='text/css' href='main.css'>
-
-<!-- Include Favicon -->
-<link rel='icon' type='image/x-icon' href='JSD Games.png'>
+<title>Get the Crown</title>
+<!--Favicon-->
+<link rel=icon type=image/x-icon href= "JSD Games.png" />
 
 <!-- Include jQuery core -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-<!-- Include jQuery UI -->
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+<!--Stylesheet-->
+<link rel=stylesheet type=text/css href='main.css' />
 
-<!-- Javascript/JQuery -->
-<script>
-$(document).ready(function() {
-$('#tabs').tabs({
-active: 0
-});
-
-
-});
-
-
-
-
-</script>
-
-<!-- Page-Specific CSS -->
 <style>
-body{
-background-image: url(JSDGames.png);
+a{color:gray;}
+a:hover{color:black;}
+a:active{color:blue;}
+audio{
+float:left;
 }
-.desc{
-width:300px;
-}
-.gamediv{
-border:2px;
-background-color: gray;
-width: 300px;
-}
+#startbutton{
+color:white;
+margin-top:10%;
+margin-left:42%;
+display: inline-block;
+background-color: blue;}
 
-#swords{
-margin-left:10%
-}
 
-#crowntext{
-margin-left:10%
-}
+.credits{
+float: right;
+color:gray;
+font:courier;}
+
+h1{
+text-align: center;}
+
+h2{
+text-align: center;}
 </style>
 
+<meta charset = utf-8 />
+<meta name = viewport content = 'width=device-width' />
+<meta name = description content = "A small choose-your-own-adventure game where you must infiltrate the enemy castle and take back the stolen crown." />
+
+<script>
+function start(){
+
+
+
+
+
+const name = prompt('What is your name?');
+
+if(name !== null){
+if(name !== ""){
+
+window.alert("Hello, "+name+"! Let's get you familiar with the rules of this game. With each choice you make, you will be presented with a scenario with up to 3 choices. Type 1 for choice 1, 2 for choice 2, and 3 for choice 3.");
+window.alert("Okay, ready? Then let's go!");
+
+var choice = prompt("We start off in the middle of a kingdom where you have the option to go to the village, the forest, or the enemy castle. What do you do?");
+
+if(choice == "2"){
+window.alert("Once you took a few steps into the forest you got ambushed by goblins and had no way to fight back! Game over!");}
+
+if(choice == "3"){
+window.alert("You tried to unlock the gates to the enemy castle without the key, but the enemy king noticed and sent his guards after you. Game over!")}
+
+if(choice == "1"){
+
+var choice = prompt("You enter the village and see the blacksmith and an old man's house. Where do you go?")
+
+if(choice == "2"){
+window.alert('You went up to the old man\'s house and knocked on the door. He came out with a strange look on his face and asked, "What\'s your name? Your face looks familiar."')
+window.alert('When you replied, he gasped and said, "'+name+'! I-I\'ve heard that name before!" Then locked you in a small room in his house until enemy guards came and captured you! It turns out the old man was an enemy spy. Game over!')}
+
+if(choice == "1"){
+
+var choice = prompt("You entered the blacksmith and it turns out you were the hundredth customer! You got a free sword and shield! Where do you go now, the forest, the enemy castle, or the old man's house?")
+
+if(choice == "2"){
+window.alert("You tried to unlock the gates to the enemy castle without the key, but the enemy king noticed and sent his guards after you. Game over!")}
+
+if(choice == "3"){
+window.alert('You went up to the old man\'s house and knocked on the door. He came out with a strange look on his face and asked, "Whats your name? Your face looks familiar."')
+window.alert('When you replied, he gasped and said, "'+name+'! I-I\'ve heard that name before!" Then locked you in a small room in his house until enemy guards came and captured you! It turns out the old man was an enemy spy. Game over!')}
+
+if(choice == "1"){
+
+var choice = prompt("You headed to the forest and got attacked by goblins but defeated them with your new sword and shield, taking the key to the enemy castle that they were guarding. What do you do now, go deeper into the forest or unlock the gates to the enemy castle with your new key?")
+
+if(choice == "1"){
+window.alert("You went deeper into the forest and got caught in a spike trap. Game over!")}
+
+if(choice == "2"){
+
+var choice = prompt("You went & unlocked the gates to the enemy castle and quietly slipped in. Do you head straight through the castle or go through the dungeon?")
+
+if(choice == "1"){
+window.alert("You headed straight through the castle and got caught by the gaurds! Game over!")}
+
+if(choice == "2"){
+window.alert("You snuck through the dungeon. Many people who didn't deserve to be in there had been captured by the enemy guards. Luckily, the warden wasn't there today. you could free those people after you got the stolen crown back.")
+window.alert("When you left the dungeon, you realized where you were--the treasury! You found the stolen crown and the key to the dungeon! You freed everybody and got out safely. You win!")
+}}}}}}}}
+</script>
 </head>
 <body>
 
-<div id="tabs">
-<ul>
-<li><a href="#fragment-1">Home</a></li>
-<li><a href="#fragment-2">Games</a></li>
-<li><a href="#fragment-3">About</a></li>
-</ul>
+<!--Music-->
 
-<div id="fragment-1">
-<img src='JSDGames.png' />
-<p>I'm Jonas and I made this website because coding is a hobby of mine. Some things I like include coding, gaming, and reading.</p>
-</div>
+<h1>Get the Crown!</h1>
+<h2>Click the swords to begin!</h2>
+
+<!--Start Button-->
+<button id = startbutton onclick = start()><img src = swords.png /></button>
 
 
-<div id="fragment-2">
-<div class=gamediv id = getthecrown>
-<h2 id=crowntext>Get the crown</h2>
+<!--Credits-->
+<p>
+
+<a href=https://jonassd.xyz/games>
+<button class = linkbutton >Back to Games Page</button>
+</a>
+
+
 <br>
-<img id=swords src=swords.png />
-<p class=desc >A small text-based game played with window popups where you must infiltrate the enemy castle and take back the stolen crown.</p>
-
-<button class=playbutton id=crownbutton onclick="location.href='getTheCrown.html'" >Play</button>
-</div>
-
-
-</div>
-
-<div id="fragment-3">
-<p>This is a fairly simple website I made as a little project. I hope you like it! Feel free to use any of my assets from this site.</p>
-</div>
-
-</div>
-
-<footer><p>v1.0.5</p></footer>
-
-
-
+<br>
+<audio src = "medieval-citytavern-ambient-235876.mp3" controls></audio>
+</p>
+<footer class = credits><a href = "https://pixabay.com/music/folk-medieval-citytavern-ambient-235876/" target="_blank">Music Credits</a>
+<p>🄯Jonas Spence Dobias v1.0.5</p></footer>
 
 
 
