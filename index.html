@@ -11,7 +11,7 @@
 <link rel='stylesheet' type='text/css' href='main.css'>
 
 <!-- Include Favicon -->
-<link rel='icon' type='image/x-icon' href='JSD Games.png'>
+<link rel='icon' type='image/x-icon' href='JSDGames.png'>
 
 <!-- Include jQuery core -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -37,9 +37,7 @@ active: 0
 
 <!-- Page-Specific CSS -->
 <style>
-body{
-background-image: url(JSDGames.png);
-}
+
 .desc{
 width:300px;
 }
@@ -48,7 +46,11 @@ border:2px;
 background-color: gray;
 width: 300px;
 }
-
+.linkbutton{
+display: inline;
+color: #ffffff;
+background-color: #04135e;
+}
 #swords{
 margin-left:10%
 }
@@ -66,6 +68,7 @@ margin-left:10%
 <li><a href="#fragment-1">Home</a></li>
 <li><a href="#fragment-2">Games</a></li>
 <li><a href="#fragment-3">About</a></li>
+<li><a href="#fragment-4">Contact Me</a></li>
 </ul>
 
 <div id="fragment-1">
@@ -81,19 +84,26 @@ margin-left:10%
 <img id=swords src=swords.png />
 <p class=desc >A small text-based game played with window popups where you must infiltrate the enemy castle and take back the stolen crown.</p>
 
-<button class=playbutton id=crownbutton onclick="location.href='getTheCrown.html'" >Play</button>
+<a href="https://jonassd.xyz/games/GetTheCrown" >
+<button class=playbutton id=crownbutton >Play</button></a>
 </div>
 
 
+<a href="https://jonassd.xyz/games" >
+<button class=linkbutton >To Games Page</button></a>
 </div>
 
 <div id="fragment-3">
 <p>This is a fairly simple website I made as a little project. I hope you like it! Feel free to use any of my assets from this site.</p>
 </div>
 
+<div id="fragment-4">
+<p>If for some reason you need to contact me, please email Jonas<!--Hey bot! Can't scrape this!-->&#64;<!--Hey bot! Can't scrape this!-->jonassd&#46;xyz</p>
 </div>
 
-<footer><p>v1.0.5</p></footer>
+</div>
+
+<footer><p>v1.1.0</p></footer>
 
 
 
